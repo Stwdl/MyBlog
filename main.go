@@ -27,6 +27,6 @@ func main() {
 	//	// delete
 	//	num, err = o.Delete(&u)
 	//	fmt.Printf("NUM: %d, ERR: %v\n", num, err)
-
+	beego.SetStaticPath("/assets/", "static/assets/")
 	beego.Run()
 }
