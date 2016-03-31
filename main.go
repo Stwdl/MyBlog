@@ -1,35 +1,33 @@
 package main
 
 import (
-	//	"MyBlog/models"
-	_ "MyBlog/routers"
 	"log"
 
 	"github.com/astaxie/beego"
 )
 
+type MainController struct {
+	beego.Controller
+}
+
+func (c *MainController) Get() {
+	beego.BeeLogger.Info("设置静态路径")
+	c.Data["Website"] = "beego.me"
+	c.Data["Email"] = "astaxie@gmail.com"
+	c.TplName = "Home.html"
+}
+
+func (c *MainController) Default() {
+	beego.BeeLogger.Info("设置静态路径")
+	c.Data["Website"] = "beego.me"
+	c.Data["Email"] = "astaxie@gmail.com"
+	c.TplName = "index.tpl"
+}
 func main() {
 
-	//	models.Init()
-	//	o := orm.NewOrm()
-	//	user := models.User{Name: "李逍遥"}
-	//	//插入数据
-	//	id, err := o.Insert(&user)
-	//	fmt.Printf("ID: %d, ERR: %v\n", id, err)
-
-	//	user.Name = "赵灵儿"
-	//	num, err := o.Update(&user)
-	//	fmt.Printf("NUM: %d, ERR: %v\n", num, err)
-
-	//	u := models.User{Id: user.Id}
-	//	err = o.Read(&u)
-	//	fmt.Printf("ERR: %v\n", err)
-
-	//	// delete
-	//	num, err = o.Delete(&u)
-	//	fmt.Printf("NUM: %d, ERR: %v\n", num, err)
 	log.Printf("程序开始")
-	beego.SetStaticPath("/assets/", "static/assets/")
+	beego.Router("/", &MainController{})
+	beego.Router("/default", &MainController{}, "get:Default") //控制器/动作
 
-	beego.Run(":55500")
+	beego.Run(":5050")
 }

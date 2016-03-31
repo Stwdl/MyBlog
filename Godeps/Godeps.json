@@ -4,14 +4,6 @@
 	"GodepVersion": "v60",
 	"Deps": [
 		{
-			"ImportPath": "MyBlog/controllers",
-			"Rev": "ed91af1bf5bb84ddc1c1aee6a8aa0a12b685bcdd"
-		},
-		{
-			"ImportPath": "MyBlog/routers",
-			"Rev": "ed91af1bf5bb84ddc1c1aee6a8aa0a12b685bcdd"
-		},
-		{
 			"ImportPath": "github.com/astaxie/beego",
 			"Comment": "v1.6.0-9-gfbb98fb",
 			"Rev": "fbb98fbe1fe5f6a4209772b44e2547714992340c"
