@@ -29,5 +29,5 @@ func main() {
 	beego.Router("/", &MainController{})
 	beego.Router("/default", &MainController{}, "get:Default") //控制器/动作
 
-	beego.Run(":5050")
+	beego.Run("0.0.0.0:5050")
 }
