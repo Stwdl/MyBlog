@@ -155,6 +155,7 @@ func (app *App) Run() {
 	if BConfig.Listen.EnableHTTP {
 		go func() {
 			app.Server.Addr = addr
+
 			BeeLogger.Info("http server Running on %s", app.Server.Addr)
 			if BConfig.Listen.ListenTCP4 {
 				ln, err := net.Listen("tcp4", app.Server.Addr)

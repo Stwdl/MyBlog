@@ -3,6 +3,7 @@ package main
 import (
 	//	"MyBlog/models"
 	_ "MyBlog/routers"
+	"log"
 
 	"github.com/astaxie/beego"
 )
@@ -27,6 +28,8 @@ func main() {
 	//	// delete
 	//	num, err = o.Delete(&u)
 	//	fmt.Printf("NUM: %d, ERR: %v\n", num, err)
+	log.Printf("程序开始")
 	beego.SetStaticPath("/assets/", "static/assets/")
+
 	beego.Run(":55500")
 }
