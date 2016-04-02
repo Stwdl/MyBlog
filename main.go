@@ -1,33 +1,36 @@
 package main
 
 import (
-	"log"
+	"myblog/controllers"
+	"myblog/models"
+	_ "myblog/routers"
 
 	"github.com/astaxie/beego"
 )
 
-type MainController struct {
-	beego.Controller
+///返回存字符串的限定字数的文字
+func toHtml(in string, count int) (out string) {
+	content := beego.Substr(beego.Htmlunquote(beego.HTML2str(in)), 0, count)
+	if len(in) > count {
+		return content + "......"
+	} else {
+		return content
+	}
 }
-
-func (c *MainController) Get() {
-	beego.BeeLogger.Info("设置静态路径")
-	c.Data["Website"] = "beego.me"
-	c.Data["Email"] = "astaxie@gmail.com"
-	c.TplName = "Home.html"
-}
-
-func (c *MainController) Default() {
-	beego.BeeLogger.Info("设置静态路径")
-	c.Data["Website"] = "beego.me"
-	c.Data["Email"] = "astaxie@gmail.com"
-	c.TplName = "index.tpl"
+func add(a int, b int) (out int) {
+	return a + b
 }
 func main() {
 
-	log.Printf("程序开始")
-	beego.Router("/", &MainController{})
-	beego.Router("/default", &MainController{}, "get:Default") //控制器/动作
+	beego.AddFuncMap("add", add)
+	beego.AddFuncMap("toHtml", toHtml)
+	beego.ErrorController(&controllers.ErrorController{})
 
-	beego.Run("0.0.0.0:5050")
+	models.Init()
+	if beego.AppConfig.String("RunMode") == "dev" {
+		beego.Run()
+	} else {
+		beego.Run("0.0.0.0:5050")
+	}
+
 }

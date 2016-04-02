@@ -1,8 +1,8 @@
 package routers
 
 import (
-	"MyBlog/controllers"
 	"log"
+	"myblog/controllers"
 
 	"github.com/astaxie/beego"
 )
@@ -10,5 +10,5 @@ import (
 func init() {
 	log.Printf("初始化路由器")
 	beego.Router("/", &controllers.MainController{})
-	beego.Router("/default", &controllers.MainController{}, "get:Default") //控制器/动作
+
 }
