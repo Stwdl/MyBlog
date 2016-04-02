@@ -47,17 +47,17 @@
 
 				<div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse-4">
 					<ul class="am-nav am-nav-pills am-topbar-nav">
-						<li class="am-active"><a href="#">主页</a></li>
-						<li><a href="#">文章</a></li>
-						<li><a href="#">相册</a></li>
-						<li><a href="#">音乐</a></li>
-						<li><a href="#">About Me</a></li>
+						<li class="am-active"><a href="/">主页</a></li>
+						<li><a href="Article">文章</a></li>
+						<li><a href="Photo">相册</a></li>
+						<li><a href="Music">音乐</a></li>
+						<li><a href="About">About Me</a></li>
 						<li class="am-dropdown" data-am-dropdown>
 							<a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
             其他 <span class="am-icon-caret-down"></span>
           </a>
 							<ul class="am-dropdown-content">
-								<li><a href="#">给我留言</a></li>
+								<li><a href="Message">给我留言</a></li>
 								
 
 							</ul>

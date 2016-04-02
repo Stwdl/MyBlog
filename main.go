@@ -2,7 +2,7 @@ package main
 
 import (
 	"myblog/controllers"
-	"myblog/models"
+	//	"myblog/models"
 	_ "myblog/routers"
 
 	"github.com/astaxie/beego"
@@ -24,9 +24,9 @@ func main() {
 
 	beego.AddFuncMap("add", add)
 	beego.AddFuncMap("toHtml", toHtml)
+	//绑定全局错误处理控制器
 	beego.ErrorController(&controllers.ErrorController{})
 
-	models.Init()
 	if beego.AppConfig.String("RunMode") == "dev" {
 		beego.Run()
 	} else {

@@ -11,8 +11,8 @@ import (
 	_ "github.com/mattn/go-sqlite3"
 )
 
-func Init() {
-	log.Printf("开始初始化数据库")
+func init() {
+
 	dbtype := beego.AppConfig.String("dbtype")
 	log.Printf("数据库类型为：%s", dbtype)
 	if dbtype == "mysql" {
