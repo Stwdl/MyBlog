@@ -1,0 +1,10 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><style type="text/css" id="1397383831233"></style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<title>您访问的网站不存在 - {{.appname}}</title>
+<style type="text/css">body{background-color:#fff}.kc{font-size:16px;text-decoration:none;font-family:"新宋体";color:#333}.ed{width:90%;max-width:800px;margin:100px auto}.ec{width:100%;height:400px;margin:10px 0;background-color:#636562;-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;color:#fff}.et{margin-left:200px;font-size:30px;font-weight:bolder;font-family:"黑体";padding-top:65px}.ex{margin-left:200px;font-size:12px;padding-top:10px}.ex a{color:#fff}.fr{float:right}.fl{float:left}.bt{font-family:Arial;font-size:12px;color:#666}.bt a{color:#666;text-decoration:none}.bt a:hover{color:#69bee6;text-decoration:underline}.ei{margin-left:10px;margin-top:50px}</style><style type="text/css">*{margin:0;padding:0}html,body{height:100%;overflow:hidden}#light{display:none;width:100%;height:100%;max-width:480px;margin:0 auto;position:relative;background:url(http://lib.sinaapp.com/light-err.jpg) no-repeat 50% 50%;background-size:100%;}.sh{position:absolute;left:0;bottom:20px;width:100%;text-align:center;color:#333;}@media only screen and (max-width:660px){.ei{display:none;}.ec{height:auto;padding-bottom:20px;}.et{margin:0 20px;font-size:20px;padding-top:20px;}.ex{margin:0 20px;}}@media only screen and (max-width:400px){.bt{float:left;}}.sinacloud{float:right;margin-right:40px;margin-top:30px;}.sinacloud a{color:#fff;text-decoration:none}.sinacloud a:hover{color:#2942FA;text-decoration:underline}</style></head><body><div class="ed">
+<div class="ec">
+<img src="{{.errimg}}" class="fl ei">
+<div class="et">爱上一个丫环，可地主家没有余粮！<br></div>
+<div class="ex">逗逼么，网页哪去了？</div>
+<div class="sinacloud">
+<a href="http://{{.appurl}}">{{.appname}}</a></div></div></div>
+</body></html>
